@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Test example
 
 # Controls when the workflow will run
 on:
@@ -35,29 +35,6 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-      name: Test
-
-on:
-  # Push en cualquier rama
-  push:
-
-  # Pull Request solo hacia main
-  pull_request:
-    branches:
-      - main
-
-  # Ejecución manual
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Echo normal
-        run: echo "Workflow ejecutándose correctamente"
 
       - name: Echo de un secret
         run: echo "El valor del secret es $MY_SECRET"
