@@ -34,3 +34,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+    
+      - name: Echo de un secret
+        run: echo "El valor del secret es $MY_SECRET"
+        env:
+          MY_SECRET: ${{ secrets.MY_SECRET }}
+
